@@ -1,12 +1,21 @@
 import React from "react";
 import classes from "./Note.module.css";
+import Auxilary from "../../hoc/Auxilary";
 
-const Note = () => {
+const Note = (props) => {
   return (
-    <div className={classes.Note}>
-      <h3>Title:</h3>
-      <p></p>
-    </div>
+    <Auxilary>
+      <body>
+        <ul>
+          <li>
+            <a href="#">
+              <h2 contentEditable="true">Title:{props.title}</h2>
+              <p contentEditable="true"> abv{props.content}</p>
+            </a>
+          </li>
+        </ul>
+      </body>
+    </Auxilary>
   );
 };
 
