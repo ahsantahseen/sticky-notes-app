@@ -1,0 +1,9 @@
+.Note {
+  font-family: arial, sans-serif;
+  font-size: 100%;
+  margin: 3em;
+  background: #666;
+  color: yellow;
+  height: 300px;
+  width: 300px;
+}
