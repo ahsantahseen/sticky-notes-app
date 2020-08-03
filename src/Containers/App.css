@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+.Note {
+  display: inline-flex;
+  align-items: flex-start;
+  word-wrap: break-word;
+  justify-content: space-evenly;
+}

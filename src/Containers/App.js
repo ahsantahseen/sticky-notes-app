@@ -13,12 +13,13 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
+        <h2>Sticky Notes</h2>
+        <button onClick={createNote}>Click</button>
+      </div>
+      <div className="Note">
         {count.map((elem) => {
           return <Note key={elem} />;
         })}
-
-        <h2>Sticky Notes</h2>
-        <button onClick={createNote}>Click</button>
       </div>
     </React.Fragment>
   );
