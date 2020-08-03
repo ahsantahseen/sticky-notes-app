@@ -1,0 +1,27 @@
+.Footerbar {
+  display: flex;
+  flex-direction: column;
+  min-width: 30vh;
+  align-items: center;
+  align-content: center;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+}
+.Footerbar-content {
+  flex: 1;
+}
+@media (min-width: 499px) {
+  .Footerbar {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+    text-align: center;
+  }
+  .Footerbar-content {
+    flex: 1;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Note from "../Components/Note/Note";
 import CreateNote from "../Components/CreateNote/CreateNote";
 import "./App.css";
+import Footerbar from "../Components/Footerbar/Footerbar";
 
 function App() {
   const [count, setCount] = React.useState([]);
@@ -23,6 +24,7 @@ function App() {
           })}
         </center>
       </div>
+      <Footerbar></Footerbar>
     </React.Fragment>
   );
 }
