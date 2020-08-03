@@ -10,15 +10,17 @@ const Note = (props) => {
 
   let random_position = positions[Math.floor(Math.random() * positions.length)];
 
-  console.log(random_color);
   return (
     <Auxilary>
       <div
+        suppressContentEditableWarning={true}
         className={classes.sticky}
         style={{ background: random_color, transform: random_position }}
       >
-        <b contentEditable="true">Untitled</b>
-        <p contentEditable="true"></p>
+        <b contentEditable="true" suppressContentEditableWarning={true}>
+          Untitled
+        </b>
+        <p contentEditable="true" suppressContentEditableWarning={true}></p>
       </div>
     </Auxilary>
   );

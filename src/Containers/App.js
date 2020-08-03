@@ -3,7 +3,6 @@ import Note from "../Components/Note/Note";
 import CreateNote from "../Components/CreateNote/CreateNote";
 import "./App.css";
 import Footerbar from "../Components/Footerbar/Footerbar";
-import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [count, setCount] = React.useState([]);
@@ -11,7 +10,6 @@ function App() {
     setCount([...count, (count.length += 1)]);
   };
 
-  console.log(count);
   return (
     <React.Fragment>
       <div className="App">
