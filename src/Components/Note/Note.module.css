@@ -1,37 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: arial, sans-serif;
-  font-size: 100%;
-  margin: 3em;
-  background: #666;
-  color: #fff;
-}
-h2,
-p {
-  font-size: 100%;
-  font-weight: normal;
-}
-ul,
-li {
-  list-style: none;
-}
-ul {
-  overflow: hidden;
-  padding: 3em;
-}
-ul li a {
-  text-decoration: none;
+.sticky {
+  display: inline-block;
+
+  left: 0;
+  z-index: 150;
+  transform: rotate(5deg);
+  width: 200px;
+  min-height: 150px;
+  margin: -10px 10px 10px;
+  padding: 10px;
+  font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue",
+    cursive;
+  font-size: 14px;
   color: #000;
-  background: #ffc;
-  display: block;
-  height: 10em;
-  width: 10em;
-  padding: 1em;
+  background: rgba(255, 255, 51, 0.8);
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-ul li {
-  margin: 1em;
-  float: left;
+.sticky:before,
+.sticky:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  right: 0;
+}
+.sticky:before {
+  border-top: solid 8px #fff;
+  border-right: solid 8px #fff;
+  border-left: solid 8px transparent;
+  border-bottom: solid 8px transparent;
+}
+.sticky:after {
+  border-bottom: solid 8px #dddd33;
+  border-left: solid 8px #dddd33;
+  border-right: solid 8px transparent;
+  border-top: solid 8px transparent;
 }
