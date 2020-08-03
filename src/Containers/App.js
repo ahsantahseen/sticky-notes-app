@@ -1,6 +1,6 @@
 import React from "react";
 import Note from "../Components/Note/Note";
-
+import CreateNote from "../Components/CreateNote/CreateNote";
 import "./App.css";
 
 function App() {
@@ -14,12 +14,14 @@ function App() {
     <React.Fragment>
       <div className="App">
         <h2>Sticky Notes</h2>
-        <button onClick={createNote}>Click</button>
+        <CreateNote clicked={createNote}></CreateNote>
       </div>
       <div className="Note">
-        {count.map((elem) => {
-          return <Note key={elem} />;
-        })}
+        <center>
+          {count.map((elem) => {
+            return <Note key={elem} />;
+          })}
+        </center>
       </div>
     </React.Fragment>
   );
