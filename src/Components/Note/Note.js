@@ -4,12 +4,11 @@ import Auxilary from "../../hoc/Auxilary";
 
 const Note = (props) => {
   const colors = ["#fff740", "#7afcff", "#ff7eb9", "#feff9c"];
-  const random_color = colors[Math.floor(Math.random() * colors.length)];
+  let random_color = colors[Math.floor(Math.random() * colors.length)];
 
   const positions = ["rotate(5deg)", "rotate(-5deg)"];
 
-  const random_position =
-    positions[Math.floor(Math.random() * positions.length)];
+  let random_position = positions[Math.floor(Math.random() * positions.length)];
 
   console.log(random_color);
   return (

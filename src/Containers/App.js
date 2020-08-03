@@ -3,6 +3,7 @@ import Note from "../Components/Note/Note";
 import CreateNote from "../Components/CreateNote/CreateNote";
 import "./App.css";
 import Footerbar from "../Components/Footerbar/Footerbar";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [count, setCount] = React.useState([]);
@@ -20,7 +21,7 @@ function App() {
       <div className="Note">
         <center>
           {count.map((elem) => {
-            return <Note key={elem} />;
+            return <Note key={uuidv4()} />;
           })}
         </center>
       </div>
