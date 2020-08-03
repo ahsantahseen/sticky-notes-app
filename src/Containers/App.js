@@ -21,7 +21,7 @@ function App() {
       <div className="Note">
         <center>
           {count.map((elem) => {
-            return <Note key={uuidv4()} />;
+            return <Note key={elem} />;
           })}
         </center>
       </div>
