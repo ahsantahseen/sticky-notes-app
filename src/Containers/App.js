@@ -22,8 +22,9 @@ function App() {
             return <Note key={elem} />;
           })}
         </center>
+
+        <Footerbar></Footerbar>
       </div>
-      <Footerbar></Footerbar>
     </React.Fragment>
   );
 }
