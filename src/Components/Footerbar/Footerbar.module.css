@@ -1,15 +1,13 @@
 .Footerbar {
-  display: flex;
-  flex-direction: column;
-  min-width: 30vh;
-  align-items: center;
-  align-content: center;
-  left: 0;
-  bottom: 0;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 35px;
   text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  padding: 5px;
   color: white;
+  overflow: hidden;
 }
 .Footerbar-content {
   flex: 1;
