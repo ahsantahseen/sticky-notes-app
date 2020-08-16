@@ -3,6 +3,7 @@ import Note from "../Components/Note/Note";
 import CreateNote from "../Components/CreateNote/CreateNote";
 import "./App.css";
 import Footerbar from "../Components/Footerbar/Footerbar";
+import Auxilary from "../hoc/Auxilary";
 
 function App() {
   const [count, setCount] = React.useState([]);
@@ -11,7 +12,7 @@ function App() {
   };
 
   return (
-    <React.Fragment>
+    <Auxilary>
       <div className="App">
         <h2>Sticky Notes</h2>
         <CreateNote clicked={createNote}></CreateNote>
@@ -25,7 +26,7 @@ function App() {
           <Footerbar></Footerbar>
         </div>
       </div>
-    </React.Fragment>
+    </Auxilary>
   );
 }
 
