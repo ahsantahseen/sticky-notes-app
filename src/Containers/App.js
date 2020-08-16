@@ -16,14 +16,14 @@ function App() {
         <h2>Sticky Notes</h2>
         <CreateNote clicked={createNote}></CreateNote>
       </div>
-      <div className="Note">
-        <center>
+      <div className="container">
+        <div className="Note">
           {count.map((elem) => {
             return <Note key={elem} />;
           })}
-        </center>
 
-        <Footerbar></Footerbar>
+          <Footerbar></Footerbar>
+        </div>
       </div>
     </React.Fragment>
   );
