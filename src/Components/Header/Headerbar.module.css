@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  gap: 1.5rem;
+  padding: 1.5rem;
   height: 40px;
   width: 100%;
   background-color: #ccc;
@@ -11,13 +12,13 @@
 .Logo {
   text-decoration: none;
   font-weight: bold;
-  margin-left: 1.5rem;
+  font-size: 20px;
 }
 .MenuIcons {
   display: grid;
   grid-template-columns: repeat(4, auto);
   align-items: center;
-  gap: 1.5rem;
+  gap: 30px;
 }
 .userpic {
   height: 36px;

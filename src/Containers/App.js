@@ -7,6 +7,7 @@ import Headerbar from "../Components/Header/Headerbar";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
+import CreateNote from "../Components/CreateNote/CreateNote"
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
@@ -30,17 +31,18 @@ const SignIn = () => {
     const GoogleSignIn = () => {
       const provider = new firebase.auth.GoogleAuthProvider();
       auth.signInWithPopup(provider);
+      
     };
     return (
-      <div>
-        <img alt="Sign in with google"onClick={GoogleSignIn} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" style={{height:"45px",width:"45px"}}></img>
-      </div>
+        
+        <img alt="Sign in with google" onClick={GoogleSignIn} src="https://i.imgur.com/IjVIMxf.png" style={{height:"auto",width:"auto"}}></img>
+        
     );
   };
   
  const SignOut = () => {
     return (
-      auth.currentUser && <img alt="sing out" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Octicons-sign-out.svg" style={{height:"45px", width:"45px"}} onClick={() => auth.signOut()}></img>
+      auth.currentUser && <img alt="sing out" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Octicons-sign-out.svg" style={{height:"32px", width:"32px"}} onClick={() => auth.signOut()}></img>
         
       
     );
@@ -48,6 +50,8 @@ const SignIn = () => {
 
 function App() {
   const [user] = useAuthState(auth);
+  
+const [enableNotes, setenableNotes] = useState(false);
 
   const [count, setCount] = useState([]);
   const createNote = () => {
@@ -65,7 +69,7 @@ function App() {
     <Auxilary>
 
       <div className="App">
-      <Headerbar createNote={createNote} >{user?<><SignOut></SignOut><img className={classes.userpic} alt="user-pic" src="http://unsplash.it/36/36?gravity=center"/></>:<SignIn></SignIn>}</Headerbar>
+      <Headerbar >{user? <><CreateNote clicked={createNote}></CreateNote><SignOut></SignOut><img className={classes.userpic} alt="user-pic" src="http://unsplash.it/36/36?gravity=center"/></>:<SignIn></SignIn>}</Headerbar>
       <div className="container">
         <div className="Note">
           {count.map((elem,index) => {
