@@ -1,7 +1,6 @@
 import React,{useState} from "react";
 import Note from "../Components/Note/Note";
 import "./App.css";
-import Footerbar from "../Components/Footerbar/Footerbar";
 import Auxilary from "../hoc/Auxilary";
 import Headerbar from "../Components/Header/Headerbar";
 
@@ -29,7 +28,6 @@ function App() {
             return <Note key={elem} delete={()=>deleteNote(index)} />;
           })}
 
-          <Footerbar></Footerbar>
         </div>
       </div>
       

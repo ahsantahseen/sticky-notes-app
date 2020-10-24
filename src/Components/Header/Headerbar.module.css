@@ -19,3 +19,9 @@
   align-items: center;
   gap: 1.5rem;
 }
+.userpic {
+  height: 36px;
+  width: 36px;
+  background-color: #aaa;
+  border-radius: 50%;
+}

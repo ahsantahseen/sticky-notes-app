@@ -6,9 +6,10 @@ const Note = (props) => {
 
   return (
     <Auxilary>
-    <img alt="delete" src="https://img.icons8.com/metro/26/000000/delete-sign.png" onClick={props.delete}
-      className={classes.deleteIcon}></img>
-
+      <div>
+      <img alt="delete" src="https://img.icons8.com/metro/26/000000/delete-sign.png" onClick={props.delete}
+    className={classes.deleteIcon}></img>
+    
       <div
         suppressContentEditableWarning={true}
         className={classes.sticky}
@@ -19,7 +20,7 @@ const Note = (props) => {
         </b>
         <p contentEditable="true" suppressContentEditableWarning={true}></p>
       </div>
-      
+      </div>
     </Auxilary>
   );
 };

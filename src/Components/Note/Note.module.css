@@ -32,5 +32,6 @@
   rotate: 0deg;
 }
 .deleteIcon {
-  position: fixed;
+  position: absolute;
+  margin-left: -10xp;
 }
