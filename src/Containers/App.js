@@ -26,7 +26,7 @@ function App() {
       <div className="container">
         <div className="Note">
           {count.map((elem,index) => {
-            return <Note key={elem} delete={()=>deleteNote(index)} index={index}/>;
+            return <Note key={elem} delete={()=>deleteNote(index)} />;
           })}
 
           <Footerbar></Footerbar>
