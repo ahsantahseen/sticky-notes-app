@@ -1,0 +1,20 @@
+.Headerbar {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 40px;
+  width: 100%;
+  background-color: #ccc;
+}
+.Logo {
+  text-decoration: none;
+  font-weight: bold;
+}
+.MenuIcons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  gap: 1.5rem;
+}

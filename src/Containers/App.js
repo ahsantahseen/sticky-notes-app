@@ -1,9 +1,9 @@
 import React from "react";
 import Note from "../Components/Note/Note";
-import CreateNote from "../Components/CreateNote/CreateNote";
 import "./App.css";
 import Footerbar from "../Components/Footerbar/Footerbar";
 import Auxilary from "../hoc/Auxilary";
+import Headerbar from "../Components/Header/Headerbar";
 
 function App() {
   const [count, setCount] = React.useState([]);
@@ -13,10 +13,9 @@ function App() {
 
   return (
     <Auxilary>
+
       <div className="App">
-        <h2>Sticky Notes</h2>
-        <CreateNote clicked={createNote}></CreateNote>
-      </div>
+      <Headerbar createNote={createNote}></Headerbar>
       <div className="container">
         <div className="Note">
           {count.map((elem) => {
@@ -25,6 +24,8 @@ function App() {
 
           <Footerbar></Footerbar>
         </div>
+      </div>
+      
       </div>
     </Auxilary>
   );
