@@ -7,8 +7,7 @@ const Headerbar = (props) => {
         <h2 className={classes.Logo}>Sticky Notes</h2>
         <div className={classes.MenuIcons}>
         <CreateNote clicked={props.createNote}></CreateNote>
-        
-        <img className={classes.userpic} alt="user-pic" src="http://unsplash.it/36/36?gravity=center"></img>
+        {props.children}
         </div>
          
         </div>
