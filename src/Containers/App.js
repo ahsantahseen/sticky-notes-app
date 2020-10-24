@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Note from "../Components/Note/Note";
 import "./App.css";
 import Footerbar from "../Components/Footerbar/Footerbar";
@@ -6,9 +6,16 @@ import Auxilary from "../hoc/Auxilary";
 import Headerbar from "../Components/Header/Headerbar";
 
 function App() {
-  const [count, setCount] = React.useState([]);
+  const [count, setCount] = useState([]);
   const createNote = () => {
     setCount([...count, (count.length += 1)]);
+  };
+  const deleteNote=(index)=>{
+    let oldCount=[...count];
+    oldCount.splice(index,1);
+    setCount(oldCount);
+    
+    console.log("WORKING")
   };
 
   return (
@@ -18,8 +25,8 @@ function App() {
       <Headerbar createNote={createNote}></Headerbar>
       <div className="container">
         <div className="Note">
-          {count.map((elem) => {
-            return <Note key={elem} />;
+          {count.map((elem,index) => {
+            return <Note key={elem} delete={()=>deleteNote(index)} index={index}/>;
           })}
 
           <Footerbar></Footerbar>

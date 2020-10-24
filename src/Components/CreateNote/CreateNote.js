@@ -1,13 +1,12 @@
+
 import React from "react";
-import classes from "./CreateNote.module.css";
 import Auxilary from "../../hoc/Auxilary";
+import classes from "./CreateNote.module.css"
 
 const CreateNote = (props) => {
   return (
     <Auxilary>
-      <button onClick={props.clicked} className={classes.button}>
-        Create Note
-      </button>
+    <img className={classes.CreateNote} onClick={props.clicked} alt='addnote' src="https://img.icons8.com/wired/64/000000/add-column.png"/>
     </Auxilary>
   );
 };
