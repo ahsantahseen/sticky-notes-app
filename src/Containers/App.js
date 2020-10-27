@@ -51,7 +51,6 @@ const SignIn = () => {
 function App() {
   const [user] = useAuthState(auth);
   
-const [enableNotes, setenableNotes] = useState(false);
 
   const [count, setCount] = useState([]);
   const createNote = () => {
@@ -62,7 +61,6 @@ const [enableNotes, setenableNotes] = useState(false);
     oldCount.splice(index,1);
     setCount(oldCount);
     
-    console.log("WORKING")
   };
 
   return (
