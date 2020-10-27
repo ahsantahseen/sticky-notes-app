@@ -26,3 +26,11 @@
   background-color: #aaa;
   border-radius: 50%;
 }
+@media (min-width: 1100px) {
+  .Headerbar {
+    justify-content: space-around;
+  }
+  .Logo {
+    font-size: xx-large;
+  }
+}

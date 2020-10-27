@@ -11,6 +11,7 @@ import CreateNote from "../Components/CreateNote/CreateNote"
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+import SaveNote from "../Components/SaveNote/SaveNote";
 
 firebase.initializeApp( {
   apiKey: "AIzaSyCY8WPs0Gn_qF0ljm5iTIK0VBROGXisjcY",
@@ -67,7 +68,7 @@ function App() {
     <Auxilary>
 
       <div className="App">
-      <Headerbar >{user? <><CreateNote clicked={createNote}></CreateNote><SignOut></SignOut><img className={classes.userpic} alt="user-pic" src="http://unsplash.it/36/36?gravity=center"/></>:<SignIn></SignIn>}</Headerbar>
+      <Headerbar >{user? <><CreateNote clicked={createNote}></CreateNote><SaveNote/><SignOut></SignOut><img className={classes.userpic} alt="user-pic" src="http://unsplash.it/36/36?gravity=center"/></>:<SignIn></SignIn>}</Headerbar>
       <div className="container">
         <div className="Note">
           {count.map((elem,index) => {
